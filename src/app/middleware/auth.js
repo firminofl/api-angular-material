@@ -13,9 +13,14 @@ module.exports = async (req, res, next) => {
 
     try {
         const decoded = await promisify(jwt.verify)(token, process.env.APP_SECRET)
-
+        console.log(decoded)
         req.userId = decoded.id
 
+        if (!decoded.id)
+            return res.status(401).json({
+                message: 'token invalid'
+            })
+            
         return next()
     } catch (error) {
         return res.status(401).json({
