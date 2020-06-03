@@ -7,3 +7,6 @@
 - Tem a criação de testes validando email e senha corretos, senha incorreta, token fornecido e não fornecido.
 - Criação do servidor através de classe.
 - Os middlewares de execução antes das rotas foi criado numa pasta dentro de app.
+
+## Integração
+- Este projeto é a base de backend para o template desenvolvido em angular material disponível no link[https://github.com/firminofl/angular-material-template].
